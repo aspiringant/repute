@@ -17,6 +17,10 @@ export default class HTTPRequest implements IBaseResource {
     static async makeSecureGetRequest(options: any) {
         return await rp(options);
     }
+
+    static async makeSecurePostRequest(options: any) {
+        return await rp(options);
+    }
     static makeGetRequest(url: string): any {
         http.get(url, (res) => {
             console.log("STATUS: " + res.statusCode);
@@ -36,5 +40,6 @@ export default class HTTPRequest implements IBaseResource {
               });
         }).end();
     }
+
     freeResource(code: number): void {}
 }

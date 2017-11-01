@@ -1,6 +1,6 @@
 const querystring = require("querystring");
 
-import HTTPRequest from "../factories/httprequest";
+import HTTPRequest from "../factories/HTTPRequest";
 import app from "../server";
 export let callGoogleSearch = (keyword: string) => {
     const url = "www.googleapis.com";

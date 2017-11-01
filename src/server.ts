@@ -18,7 +18,7 @@ import * as passport from "passport";
 import expressValidator = require("express-validator");
 
 
-import PhantomJSFactory from "./factories/phantomjsfactory";
+import PhantomJSFactory from "./factories/PhantomJSFactory";
 
 const MongoStore = mongo(session);
 
@@ -33,7 +33,7 @@ dotenv.config({ path: ".env.example" });
  */
 import * as homeController from "./controllers/home";
 import * as userController from "./controllers/user";
-import * as ormcalculatorController from "./controllers/ormcalculator";
+import * as ormcalculatorController from "./controllers/ORMCalculator";
 import * as apiController from "./controllers/api";
 import * as contactController from "./controllers/contact";
 

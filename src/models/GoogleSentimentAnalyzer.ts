@@ -1,26 +1,28 @@
 require("@google-cloud/storage");
-// require("gapi.client");
-import HTTPRequest from "../factories/httprequest";
+const Language = require("@google-cloud/language");
+import HTTPRequest from "../factories/HTTPRequest";
 
 export default class GoogleSentimentAnalyzer {
     // Imports the Google Cloud client library.
-    private readonly storage: any;
-    private readonly language: any;
-    constructor() {
+    private language: any;
+    public constructor() {
+      this.language = new Language();
+    }
+    // tslint:disable-next-line:semicolon
+     async callLanguageApiByPackage() {
         // this.storage = new Storage();
         // Detects the sentiment of the text
-        /*this.language.analyzeSentiment({"document": document})
-          .then((results: any) => {
-            const sentiment = results[0].documentSentiment;
-
-            console.log(`Text: ${text}`);
-            console.log(`Sentiment score: ${sentiment.score}`);
-            console.log(`Sentiment magnitude: ${sentiment.magnitude}`);
-          })
-          .catch((err: any ) => {
-            console.error("ERROR:", err);
-          });
-          */
+        const text = "Upkar properties/estates are real fraud people. they had developed layouts which do not have proper conversion order. Upkar residency one of their first layouts is also fully fraud is is now getting acquired by BDA. Upkar medows has problem, Upkar ockland has full problem.";
+        const document = {
+          "content": text,
+          type: "PLAIN_TEXT"
+        };
+        const results: any = await this.language.analyzeSentiment({"document": document});
+        console.log(results);
+        const sentiment = results[0].documentSentiment;
+        console.log(`Text: ${text}`);
+        console.log(`Sentiment score: ${sentiment.score}`);
+        console.log(`Sentiment magnitude: ${sentiment.magnitude}`);
     }
 
     async callLanguageApi() {

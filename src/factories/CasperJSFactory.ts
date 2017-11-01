@@ -1,5 +1,5 @@
-import IBaseFactory from "./ibasefactory";
-import CasperJSResource from "./casperjsresource";
+import IBaseFactory from "./IBaseFactory";
+import CasperJSResource from "./CasperJSResource";
 import app from "../server";
 
 

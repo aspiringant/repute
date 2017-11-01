@@ -18,7 +18,7 @@ export let getOrmForm = (req: Request, res: Response) => {
 
 export let testGoogle = (req: Request, res: Response) => {
     const g: GoogleSentimentAnalyzer = new GoogleSentimentAnalyzer();
-    g.callLanguageApi().then(() => {
+    g.callLanguageApiByPackage().then(() => {
         res.end();
     });
 };

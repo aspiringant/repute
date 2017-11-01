@@ -1,6 +1,6 @@
 import * as https from "https";
 import * as http from "http";
-import IBaseResource from "./ibaseresource";
+import IBaseResource from "./IBaseResource";
 const rp = require("request-promise");
 
 export default class HTTPRequest implements IBaseResource {

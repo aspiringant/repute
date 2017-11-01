@@ -1,6 +1,6 @@
-import IBaseResource from "./ibaseresource";
+import IBaseResource from "./IBaseResource";
 import { Casper } from "casperjs";
-import IBaseFactory from "./ibasefactory";
+import IBaseFactory from "./IBaseFactory";
 
 
 export default class CasperJSResource extends Casper implements IBaseResource {

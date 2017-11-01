@@ -1,4 +1,4 @@
-import IBaseResource from "./ibaseresource";
+import IBaseResource from "./IBaseResource";
 
 export default interface IBaseFactory {
     factoryResources: Array<IBaseResource>;

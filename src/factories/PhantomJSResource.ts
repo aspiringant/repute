@@ -1,5 +1,5 @@
-import IBaseResource from "./ibaseresource";
-import IBaseFactory from "./ibasefactory";
+import IBaseResource from "./IBaseResource";
+import IBaseFactory from "./IBaseFactory";
 
 const phantom = require("phantom");
 

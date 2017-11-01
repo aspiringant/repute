@@ -1,4 +1,4 @@
-import IBaseFactory from "./ibasefactory";
+import IBaseFactory from "./IBaseFactory";
 import PhantomJSResource from "./PhantomJSResource";
 
 export default class PhantomJSFactory implements IBaseFactory {
